@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>View All Images</title>
+</head>
+<body>
+    <h1>All Images</h1>
+    <ul>
+        {% for image_data in image_data_list %}
+            <li>
+                <a href="/view/{{ image_data['id'] }}">
+                    <img src="{{ image_data['url'] }}" alt="Image {{ loop.index }}" height="200px" width="300px">
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+    <br>
+    <a href="/">Back to Upload</a>
+</body>
+</html>
